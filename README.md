@@ -23,7 +23,3 @@ All controls can be changed in Factorio controls settings.
 
 - Factorio 2.0
 - Space Age compatible by prototype-driven behavior
-
-## Author
-
-TPexcoTblu

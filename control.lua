@@ -16,6 +16,13 @@ local function get_player_setting(player, name)
   return settings.get_player_settings(player)[name].value
 end
 
+local function is_player_in_menu(player)
+  local gui_type = player.opened_gui_type
+  local has_gui_type = gui_type ~= nil and gui_type ~= defines.gui_type.none
+
+  return player.opened ~= nil or player.opened_self or has_gui_type
+end
+
 local function maybe_print(player, message_key, message_param)
   if not get_player_setting(player, "craft-picker-show-messages") then
     return
@@ -164,6 +171,10 @@ local CRAFT_MODE_MAX = "max"
 local function craft_selected_entity(event, craft_mode)
   local player = game.get_player(event.player_index)
   if not player or not player.valid then
+    return
+  end
+
+  if is_player_in_menu(player) then
     return
   end
 

@@ -1,0 +1,11 @@
+{
+  "name": "craft-picker",
+  "version": "0.1.1",
+  "title": "Craft Picker",
+  "author": "TPexcoTblu",
+  "factorio_version": "2.0",
+  "description": "Craft selected placed entity by hotkey.",
+  "dependencies": [
+    "base >= 2.0.0"
+  ]
+}

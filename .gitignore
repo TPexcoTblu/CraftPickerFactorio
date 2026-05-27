@@ -1,0 +1,7 @@
+.idea/
+*.iml
+
+*.zip
+__build_stage__/
+
+*.bat
